@@ -8,4 +8,5 @@ puppeteer
     .then(page => page.goto(url).then(() => page.content()))
     .then(html => fs.writeFile("./data/result.html", html, (err) => console.log(err)))
     .then(() => console.log("COMPLETE!"))
+    .then(() => process.exit())
     .catch(err => console.log(err));
